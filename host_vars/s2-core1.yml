@@ -64,16 +64,19 @@ router_bgp:
         10.2.17.1:
           remote_as: 65221
           description: iBGP_VRF_BLUE_s2-core2
+          next_hop_self: true
         10.3.1.2:
           remote_as: 65121
           description: BGP_VRF_BLUE_s1-core1
+          next_hop_self: true
         10.3.1.5:
           remote_as: 65213
           description: BGP_VRF_BLUE_s2-brdr1
+          next_hop_self: true
         10.3.1.6:
           remote_as: 65213
           description: BGP_VRF_BLUE_s2-brdr2
-      next_hop_self: true
+          next_hop_self: true
       redistribute_routes:
         - connected
         - static
@@ -95,16 +98,19 @@ router_bgp:
         10.2.18.1:
           remote_as: 65221
           description: iBGP_VRF_GREEN_s2-core2
+          next_hop_self: true
         10.3.2.2:
           remote_as: 65121
           description: BGP_VRF_GREEN_s1-core1
+          next_hop_self: true
         10.3.2.5:
           remote_as: 65213
           description: BGP_VRF_GREEN_s2-brdr1
+          next_hop_self: true
         10.3.2.6:
           remote_as: 65213
           description: BGP_VRF_GREEN_s2-brdr2
-      next_hop_self: true
+          next_hop_self: true
       redistribute_routes:
         - connected
         - static
@@ -126,16 +132,19 @@ router_bgp:
         10.2.19.1:
           remote_as: 65221
           description: iBGP_VRF_RED_s2-core2
+          next_hop_self: true
         10.3.3.2:
           remote_as: 65121
           description: BGP_VRF_RED_s1-core1
+          next_hop_self: true
         10.3.3.5:
           remote_as: 65213
           description: BGP_VRF_RED_s2-brdr1
+          next_hop_self: true
         10.3.3.6:
           remote_as: 65213
           description: BGP_VRF_RED_s2-brdr2
-      next_hop_self: true
+          next_hop_self: true
       redistribute_routes:
         - connected
         - static

@@ -64,16 +64,19 @@ router_bgp:
         10.2.17.2:
           remote_as: 65221
           description: iBGP_VRF_BLUE_s2-core1
+          next_hop_self: true
         10.4.1.2:
           remote_as: 65121
           description: BGP_VRF_BLUE_s1-core2
+          next_hop_self: true
         10.4.1.5:
           remote_as: 65213
           description: BGP_VRF_BLUE_s2-brdr1
+          next_hop_self: true
         10.4.1.6:
           remote_as: 65213
           description: BGP_VRF_BLUE_s2-brdr2
-      next_hop_self: true
+          next_hop_self: true
       redistribute_routes:
         - connected
         - static
@@ -85,7 +88,7 @@ router_bgp:
             10.4.1.2:
               activate: true
             10.4.1.5:
-              activte: true
+              activate: true
             10.4.1.6:
               activate: true
     GREEN:
@@ -95,16 +98,19 @@ router_bgp:
         10.2.18.2:
           remote_as: 65221
           description: iBGP_VRF_GREEN_s2-core1
+          next_hop_self: true
         10.4.2.2:
           remote_as: 65121
           description: BGP_VRF_GREEN_s1-core2
+          next_hop_self: true
         10.4.2.5:
           remote_as: 65213
           description: BGP_VRF_GREEN_s2-brdr1
+          next_hop_self: true
         10.4.2.6:
           remote_as: 65213
           description: BGP_VRF_GREEN_s2-brdr2
-      next_hop_self: true
+          next_hop_self: true
       redistribute_routes:
         - connected
         - static
@@ -126,16 +132,19 @@ router_bgp:
         10.2.19.2:
           remote_as: 65221
           description: iBGP_VRF_RED_s2-core1
+          next_hop_self: true
         10.4.3.2:
           remote_as: 65121
           description: BGP_VRF_RED_s1-core2
+          next_hop_self: true
         10.4.3.5:
           remote_as: 65213
           description: BGP_VRF_RED_s2-brdr1
+          next_hop_self: true
         10.4.3.6:
           remote_as: 65213
           description: BGP_VRF_RED_s2-brdr2
-      next_hop_self: true
+          next_hop_self: true
       redistribute_routes:
         - connected
         - static
