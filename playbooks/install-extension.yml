@@ -1,0 +1,20 @@
+---
+
+- name: install eos extension
+  gather_facts: false
+  # modify vars based on your environment
+  vars:
+    cvp_server: '192.168.0.5'
+    extension: 'tcpreplay.swix'
+  hosts:
+    - s1-host1
+    - s1-host2
+
+  tasks:
+    - name: install a SWIX from CVP
+      arista.eos.eos_command:
+        commands:
+          - enable
+          - "copy https://{{ cvp_server }}/cvpservice/image/getImagebyId/{{ extension }} extension:"
+          - extension {{ extension }}
+          - copy installed-extensions boot-extensions
