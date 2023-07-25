@@ -44,6 +44,7 @@ atd-setup: ## Run ansible playbook to Setup ATD Environment
 	ansible-galaxy collection install arista.avd:==3.8.6
 	ansible-galaxy collection install community.general
 	ansible-galaxy collection install ansible.posix
+	pip3 install deepmerge
 	ansible-playbook playbooks/atd-setup.yml
 
 .PHONY: atd-removelegacy
